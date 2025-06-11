@@ -2,9 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="flex justify-between text-white w-full  paddingeffect  items-center">
+    <header className="flex justify-between text-[var(--links-color)] w-full  paddingeffect  items-center">
       <Link
-      className="text-2xl font-bold"
+      className="text-2xl font-bold text-black"
         target="_blank"
         to={"https://www.linkedin.com/in/mohamed-elhaissan-050509301/"}
       >

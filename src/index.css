@@ -1,41 +1,36 @@
 @import "tailwindcss";
 
-
-@font-face {
-  font-family: "Kalice";
-  src: url("./font/Kalice-Trial-Italic.ttf") format("truetype");
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box  ;
-  font-family: 'Poppins', sans-serif;
 }
 :root {
-  --color-primary: #f1f1f1;
+  --color-primary:#FAF8F1;
   --secondary-color: #099DD5;
   --secondary-font: "Poppins", sans-serif;
+  --links-color: #FFFFFF99
+;
 }
 
 body {
-  background-color: black;
-  background: url('./assets/background.svg') no-repeat center center fixed;
-
-  font-family: Poppins, sans-serif;
+  background-color: var(--color-primary);
 }
 
-.paddingeffect {
-  padding: 20px;
-}
+
+
 a:hover {
-  color: var(--secondary-color);
+  color: white;
 }
 
-.textFont {
-  font-family: 'Kalice' !important;
-}
-.st {
-  font-family: "Luxurious Script";
-  font-weight: 400;
+
+ @font-face {
+  font-family: "MyCustomFont";
+  src: url('./fonts/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
   font-style: normal;
+  font-weight: 400;
+ }
+
+body {
+  font-family: "MyCustomFont";
 }
