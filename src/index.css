@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box  ;
 }
 :root {
@@ -19,14 +17,17 @@ body {
 
 
 
-a:hover {
-  color: white;
-}
 
 
  @font-face {
   font-family: "MyCustomFont";
   src: url('./fonts/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+ }
+ @font-face {
+  font-family: "light";
+  src: url('./fonts/PPEditorialNew-Ultralight-BF644b21500d0c0.otf') format('opentype');
   font-style: normal;
   font-weight: 400;
  }

@@ -6,13 +6,23 @@ const Hero = () => {
       <div className="flex flex-col text-black st  items-center justify-center w-full flex-1">
         <span>(*)</span>
         <div
-          className="text-9x flex flex-wrap gap-2 bg-red-700 w-full h-full"
+          className="text-9xl  "
           style={{
             fonfaamily: "Kalice",
           }}
         >
-          {firstLine.split(" ").map((char, index) => (
+          {firstLine.split("").map((char, index) => (
             <span key={index}>{char}</span>
+          ))}
+        </div>
+        <div
+          className="text-5xl  "
+          style={{
+            fonfaamily: "Kalice",
+          }}
+        >
+          {secondLine.split("").map((char, index) => (
+            <span  key={index}>{char}</span>
           ))}
         </div>
       </div>
@@ -22,4 +32,5 @@ const Hero = () => {
 
 export default Hero;
 
-const firstLine = `I am Mohamed elhaissan — A passionate full-stack developer who builds fast, functional, and beautiful web experiences.`;
+const firstLine = `I am Mohamed elhaissan — `;
+const secondLine = `A passionate full-stack developer who builds fast, functional, and beautiful web experiences.`;
