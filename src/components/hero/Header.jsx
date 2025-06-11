@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="flex justify-between w-full  paddingeffect  items-center">
+    <header className="flex justify-between text-white w-full  paddingeffect  items-center">
       <Link
       className="text-2xl font-bold"
         target="_blank"
