@@ -1,3 +1,4 @@
+import AppRoutes from "./AppRoutes";
 import Hero from "./components/hero/Hero";
 
 
@@ -6,8 +7,7 @@ function App() {
 
   return (
     <>
-     <Hero />
-     
+     <AppRoutes/>
     </>
   );
 }

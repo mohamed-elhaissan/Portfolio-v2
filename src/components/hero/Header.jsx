@@ -2,8 +2,7 @@ import { useState } from "react";
 import Menu from "./Menu";
 import { AnimatePresence } from "motion/react";
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
-import { header } from "motion/react-client";
+import { Link } from "react-router-dom"; 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +41,8 @@ const Header = () => {
         onClick={() => {
           setIsOpen(!isOpen);
         }}
-        className=" relative z-30 text-2xl font-bold hover:underline cursor-pointer"
+        className="relative  text-2xl font-bold hover:underline cursor-pointer"
+      style={{ zIndex: 9999 }}
       >
         {isOpen ? <span>Close</span> : <span>Menu</span>}
       </button>

@@ -32,14 +32,14 @@ const titleVariants = {
 
 // Character animation variants
 const charVariants = {
-  hidden: { 
-    opacity: 0, 
+  hidden: {
+    opacity: 0,
     y: 100,
     rotateX: 90,
     filter: "blur(8px)",
   },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     rotateX: 0,
     filter: "blur(0px)",
@@ -74,23 +74,26 @@ const wordVariants = {
 
 const Hero = () => {
   return (
-    <motion.div 
+    <motion.div
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="flex textFont flex-col border text-white items-center justify-start min-h-screen"
+      className="flex textFont flex-col border text-white items-center justify-start min-h-screen relative"
     >
-      <Header />
       
-      <motion.div 
+      <div className="relative z-50 w-full" style={{ zIndex: 100 }}>
+        <Header />
+      </div>
+
+      <motion.div
         variants={containerVariants}
-        className="flex flex-col text-black items-center justify-center w-full flex-1"
+        className="flex relative flex-col text-black items-center justify-center w-full flex-1"
+        style={{ zIndex: 1 }}
       >
-        {/* Asterisk */}
         <motion.span
           initial={{ opacity: 0, scale: 0, rotate: -180 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ 
+          transition={{
             delay: 0.5,
             duration: 0.8,
             type: "spring",
@@ -102,8 +105,7 @@ const Hero = () => {
           (*)
         </motion.span>
 
-        {/* Main Title */}
-        <motion.div 
+        <motion.div
           variants={titleVariants}
           className="text-6xl md:text-9xl flex flex-wrap gap-4 md:gap-10 justify-center items-center"
         >
@@ -111,9 +113,9 @@ const Hero = () => {
             {"Iam".split("").map((char, index) => (
               <motion.span
                 variants={charVariants}
-                style={{ 
+                style={{
                   display: "inline-block",
-                  transformOrigin: "50% 100%"
+                  transformOrigin: "50% 100%",
                 }}
                 className="inline-block"
                 key={`iam-${index}`}
@@ -127,9 +129,9 @@ const Hero = () => {
             {"Mohamed".split("").map((char, index) => (
               <motion.span
                 variants={charVariants}
-                style={{ 
+                style={{
                   display: "inline-block",
-                  transformOrigin: "50% 100%"
+                  transformOrigin: "50% 100%",
                 }}
                 className="inline-block"
                 key={`mohamed-${index}`}
@@ -143,9 +145,9 @@ const Hero = () => {
             {"elhaissan —".split("").map((char, index) => (
               <motion.span
                 variants={charVariants}
-                style={{ 
+                style={{
                   display: "inline-block",
-                  transformOrigin: "50% 100%"
+                  transformOrigin: "50% 100%",
                 }}
                 className="inline-block"
                 key={`elhaissan-${index}`}
@@ -161,7 +163,6 @@ const Hero = () => {
           animate="visible"
           transition={{ staggerChildren: 0.04, delayChildren: 1.2 }}
           className="text-2xl md:text-5xl mt-8 text-center max-w-4xl px-4"
-         
         >
           {secondLine.split(" ").map((word, index) => (
             <motion.span
@@ -178,7 +179,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ 
+          transition={{
             delay: 2,
             duration: 1,
             type: "spring",
@@ -187,11 +188,11 @@ const Hero = () => {
           }}
           className="absolute top-1/4 left-10 w-2 h-2 bg-black rounded-full opacity-20"
         />
-        
+
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ 
+          transition={{
             delay: 2.2,
             duration: 1,
             type: "spring",

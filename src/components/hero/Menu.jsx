@@ -13,7 +13,8 @@ const Menu = () => {
       animate="visible"
       exit="exit"
       variants={menuVariants}
-      className=" fixed left-0 top-0 w-full bg-white h-screen  "
+      className="fixed  left-0 top-0 w-full z-40 bg-white h-screen  "
+     
     >
       <motion.div
         variants={menuItemVariants}
@@ -35,7 +36,7 @@ const Menu = () => {
           y: "-100%",
         }}
         variants={menuItemVariants}
-        className="flex space-x-4 flex-col items-start gap-10 justify-evenly   h-full text-9xl"
+        className="flex  space-x-4 flex-col items-start gap-10 justify-evenly relative   h-full text-9xl"
       >
         <li
           className=" border-b-2 w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#C6BEAD] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
@@ -58,14 +59,14 @@ const Menu = () => {
         </li>
         <li
           className=" border-b-2 w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#C6BEAD] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
-          onMouseEnter={() => setIsHovered("about")}
+          onMouseEnter={() => setIsHovered("work")}
           onMouseLeave={() => setIsHovered(false)}
         >
           <Link
-            to="/about"
+            to="/work"
             className="z-10 relative flex  items-center justify-between"
           >
-            About
+            Work
             {isHovered === "about" && (
               <img
                 src={arrow}
@@ -77,15 +78,15 @@ const Menu = () => {
         </li>
         <li
           className=" border-b-2 w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#C6BEAD] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
-          onMouseEnter={() => setIsHovered("projects")}
+          onMouseEnter={() => setIsHovered("services")}
           onMouseLeave={() => setIsHovered(false)}
         >
           <Link
-            to="/projects"
+            to="/services"
             className="z-10 relative flex  items-center justify-between"
           >
-            Projects
-            {isHovered === "projects" && (
+            Services
+            {isHovered === "work" && (
               <img
                 src={arrow}
                 alt="arrow"
