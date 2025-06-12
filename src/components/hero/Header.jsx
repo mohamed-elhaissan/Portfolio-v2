@@ -47,7 +47,7 @@ const Header = () => {
         {isOpen ? <span>Close</span> : <span>Menu</span>}
       </button>
       <AnimatePresence mode="wait">
-        {isOpen && <Menu key="menu" />}
+        {isOpen && <Menu key="menu" setIsOpen={setIsOpen} />}
       </AnimatePresence>
     </motion.header>
   );

@@ -5,7 +5,7 @@ import arrow from "../../assets/arrow-right-long-line.svg";
 import { menuVariants } from "../variants";
 import { menuItemVariants } from "../variants";
 
-const Menu = () => {
+const Menu = ({setIsOpen}) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <motion.nav
@@ -23,6 +23,7 @@ const Menu = () => {
         className="w-full h-full absolute top-0 left-0 bg-[#EFE9DD]"
       />
       <motion.ul
+      onClick={() => setIsOpen(false)}
         initial={{
           opacity: 0,
           y: "-100%",
