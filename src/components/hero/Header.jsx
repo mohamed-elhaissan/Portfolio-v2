@@ -1,17 +1,40 @@
 import { useState } from "react";
 import Menu from "./Menu";
 import { AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import { header } from "motion/react-client";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const headerVariants = {
+    hidden: {
+      opacity: 0,
+      y: -50,
+      filter: "blur(10px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.7,
+        type: "spring",
+        damping: 20,
+        stiffness: 100,
+      },
+    },
+  };
   return (
-    <header className="flex items-center justify-between w-full p-6  text-black">
-      <Link
-        to="/"
-        className="text-2xl font-bold hover:underline"
-      >
+    <motion.header
+      initial="hidden"
+      animate="visible"
+      variants={headerVariants}
+      exit="hidden"
+      className="flex items-center justify-between w-full p-6  text-black"
+    >
+      <Link to="/" className="text-2xl font-bold hover:underline">
         elhaissan.dev
       </Link>
 
@@ -21,14 +44,12 @@ const Header = () => {
         }}
         className=" relative z-30 text-2xl font-bold hover:underline cursor-pointer"
       >
-        Menu
+        {isOpen ? <span>Close</span> : <span>Menu</span>}
       </button>
       <AnimatePresence mode="wait">
-      {isOpen && (
-          <Menu key='menu' />
-      )}
-        </AnimatePresence>
-    </header>
+        {isOpen && <Menu key="menu" />}
+      </AnimatePresence>
+    </motion.header>
   );
 };
 
