@@ -11,78 +11,87 @@ const Work = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
+        staggerChildren: 0.15, // Reduced stagger for smoother flow
+        delayChildren: 0.1,
       },
     },
   };
 
-  // Main title animation variants
+  // Simplified title animation variants
   const titleVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: [0.04, 0.62, 0.23, 0.98],
-        staggerChildren: 0.02,
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.05,
       },
     },
   };
 
-  // Character animation variants
+  // Optimized character animation variants - removed heavy blur
   const charVariants = {
     hidden: {
       opacity: 0,
-      y: 100,
-      rotateX: 90,
-      filter: "blur(8px)",
+      y: 50,
+      scale: 0.8,
     },
     visible: {
       opacity: 1,
       y: 0,
-      rotateX: 0,
-      filter: "blur(0px)",
+      scale: 1,
       transition: {
-        duration: 0.6,
-        type: "spring",
-        damping: 25,
-        stiffness: 120,
+        duration: 0.5,
+        ease: "easeOut",
       },
     },
   };
 
-  // Word animation variants for subtitle
+  // Lighter word animation variants - removed blur
   const wordVariants = {
     hidden: {
       opacity: 0,
-      y: 30,
-      filter: "blur(15px)",
+      y: 20,
     },
     visible: {
       opacity: 1,
       y: 0,
-      filter: "blur(0px)",
       transition: {
-        duration: 0.7,
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
+        duration: 0.5,
+        ease: "easeOut",
       },
     },
   };
+
+  // Card animation variants for work items
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
   const work = [
     {
       id: 1,
-      title: "Chat  Page Result (User)",
+      title: "Chat Page Result (User)",
       description:
         "A user interface design for a chat application, showcasing the conversation layout and user interactions.",
       image: work1,
     },
     {
       id: 2,
-      title: "Stock Market Dashboard ",
+      title: "Stock Market Dashboard",
       description:
         "A sleek and modern interface for tracking stocks, portfolios, and market insights in real time.",
       image: work2,
@@ -91,13 +100,13 @@ const Work = () => {
       id: 4,
       title: "E-Commerce Product Listing Page",
       description:
-        " A minimal and user-friendly shop interface with advanced filters and responsive product grid",
+        "A minimal and user-friendly shop interface with advanced filters and responsive product grid",
       image: work4,
     },
     {
       id: 3,
       title: "Digital Marketing Agency Website",
-      description: "Clean and modern platform for a digital marketing agency ",
+      description: "Clean and modern platform for a digital marketing agency",
       image: work3,
     },
   ];
@@ -105,28 +114,31 @@ const Work = () => {
   return (
     <motion.div
       variants={containerVariants}
+      initial="hidden"
+      animate="visible"
       className="flex relative flex-col text-black items-center justify-center w-full flex-1"
       style={{ zIndex: 1 }}
     >
       <motion.div
-        initial="hidden"
-        animate="visible"
-        className="text-black text-center mt-20  leading-10"
+        variants={titleVariants}
+        className="text-black text-center mt-20 leading-10"
       >
         <motion.h1
-          initial="hidden"
-          animate="visible"
-          variants={charVariants}
-          className="text-9xl text-[#C6BEAD]"
+          variants={titleVariants}
+          className="text-9xl text-[#C6BEAD] will-change-transform"
         >
           {"Work".split("").map((char, index) => (
             <motion.span
               style={{ display: "inline-block" }}
               variants={charVariants}
-              animate="visible"
-              initial="hidden"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ 
+                scale: 1.05, 
+                transition: { duration: 0.2 } 
+              }}
+              whileTap={{ 
+                scale: 0.95,
+                transition: { duration: 0.1 }
+              }}
               key={index}
             >
               {char}
@@ -134,76 +146,83 @@ const Work = () => {
           ))}
         </motion.h1>
         <motion.p
-          initial="hidden"
-          animate="visible"
-          variants={charVariants}
+          variants={wordVariants}
           className="text-4xl"
         >
           Explore My Work
         </motion.p>
       </motion.div>
+
       <motion.div
         variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="flex mt-20  flex-wrap flex-col justify-around   "
+        className="flex mt-20 flex-wrap flex-col justify-around"
       >
-        {work.map((l, i) => (
-          <motion.span variants={wordVariants} key={l.id}>
-            <div className="flex flex-row-reverse mx-1 border-3 border-[#EFE9DD] p-4  items-center justify-around">
-              <motion.img
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={wordVariants}
-                key={i}
-                src={l.image}
-                alt={l.title}
-                className=" w-1/4 rounded-lg shadow-lg"
-              />
-              <motion.div variants={wordVariants} whileInView="visible">
-                <h2 className="text-6xl text-[#C6BEAD] font-bold mt-4">
-                  {l.title}
-                </h2>
-                <p className="text-lg text-gray-600 mt-2">{l.description}</p>
-              </motion.div>
-            </div>
-          </motion.span>
+        {work.map((item, index) => (
+          <motion.div
+            key={item.id}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2, margin: "0px 0px -100px 0px" }}
+            className="flex flex-row-reverse mx-1 border-3 border-[#EFE9DD] p-4 items-center justify-around will-change-transform"
+          >
+            <motion.img
+              src={item.image}
+              alt={item.title}
+              className="w-1/4 rounded-lg shadow-lg will-change-transform"
+              loading="lazy" // Add lazy loading for performance
+              whileHover={{ 
+                scale: 1.02,
+                transition: { duration: 0.3 }
+              }}
+            />
+            <motion.div className="flex-1 mr-8">
+              <h2 className="text-6xl text-[#C6BEAD] font-bold mt-4">
+                {item.title}
+              </h2>
+              <p className="text-lg text-gray-600 mt-2">{item.description}</p>
+            </motion.div>
+          </motion.div>
         ))}
       </motion.div>
 
       <motion.div
         initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
         variants={wordVariants}
-        animate="visible"
-        key={"contact"}
-        className="h-screen w-full bg-[#EFE9DD] flex flex-col items-center justify-center"
+        className="h-screen w-full bg-[#EFE9DD] flex flex-col items-center justify-center will-change-transform"
       >
         <motion.h1
-          initial="hidden"
           variants={wordVariants}
-          animate="visible"
           className="text-9xl text-[#C6BEAD]"
         >
           Let's Collaborate
         </motion.h1>
         <motion.p
-        
-        initial="hidden"
-      variants={wordVariants}
-      animate="visible"
-        className="text-2xl text-gray-600">
+          variants={wordVariants}
+          className="text-2xl text-gray-600"
+        >
           If you are interested in collaborating or have any questions, feel
           free to reach out!
         </motion.p>
-        <a
+        <motion.a
           href="mailto:mhalwasoffice@gmail.com"
-          className="mt-4 px-6 py-3 flex items-center bg-[#C6BEAD] text-white text-lg rounded-lg hover:bg-[#A89F8D] transition-colors duration-300"
+          className="mt-4 px-6 py-3 flex items-center bg-[#C6BEAD] text-white text-lg rounded-lg transition-colors duration-300 will-change-transform"
           target="_blank"
           rel="noopener noreferrer"
+          whileHover={{ 
+            backgroundColor: "#A89F8D",
+            scale: 1.05,
+            transition: { duration: 0.2 }
+          }}
+          whileTap={{ 
+            scale: 0.98,
+            transition: { duration: 0.1 }
+          }}
         >
           <span>Contact Me</span>
-        </a>
+        </motion.a>
       </motion.div>
     </motion.div>
   );
