@@ -79,7 +79,7 @@ const Contact = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-screen bg-[#EFE9DD] w-full flex flex-col items-center justify-center py-20 px-4 will-change-transform"
+      className="min-h-screen text-black bg-[#EFE9DD] w-full flex flex-col items-center justify-center py-20 px-4 will-change-transform"
     >
       <motion.h1
         variants={titleVariants}
@@ -215,7 +215,7 @@ const Contact = () => {
         >
           <motion.button
             type="submit"
-            className="bg-[#C6BEAD] text-white font-semibold py-4 px-12 rounded-lg shadow-lg transition-all duration-300 will-change-transform"
+            className="bg-[#C6BEAD] cursor-pointer font-semibold py-4 px-12 rounded-lg shadow-lg transition-all duration-300 will-change-transform"
             whileHover={{
               scale: 1.05,
               backgroundColor: "#A89F8D",

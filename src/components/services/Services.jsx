@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-
 import { motion } from "motion/react";
+
 const Services = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -77,52 +77,48 @@ const Services = () => {
     },
   };
 
-  
   const services = [
     {
       id: 1,
       title: "Web Development",
       description:
         "Building responsive and user-friendly websites using modern technologies.",
-      
     },
     {
       id: 2,
       title: "UI/UX Design",
       description:
         "Creating intuitive and engaging user interfaces for web and mobile applications.",
-      
     },
     {
       id: 3,
       title: "E-commerce Solutions",
       description:
         "Developing robust e-commerce platforms with seamless shopping experiences.",
-      
     },
     {
       id: 4,
       title: "Mobile App Development",
       description:
         "Designing and building mobile applications for iOS and Android platforms.",
-     
     },
   ];
+
   return (
     <motion.div
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="flex relative flex-col text-black items-center justify-center w-full flex-1"
+      className="flex relative flex-col text-black items-center justify-center w-full flex-1 px-4 sm:px-6 lg:px-8"
       style={{ zIndex: 1 }}
     >
       <motion.div
         variants={titleVariants}
-        className="text-black text-center mt-20 leading-10"
+        className="text-black text-center mt-10 sm:mt-16 lg:mt-20 leading-8 sm:leading-10"
       >
         <motion.h1
           variants={titleVariants}
-          className="text-9xl text-[#C6BEAD] will-change-transform"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#C6BEAD] will-change-transform"
         >
           {"Services".split("").map((char, index) => (
             <motion.span
@@ -142,14 +138,44 @@ const Services = () => {
             </motion.span>
           ))}
         </motion.h1>
-        <motion.p variants={wordVariants} className="text-4xl">
-          What i do
+        <motion.p 
+          variants={wordVariants} 
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-4"
+        >
+          What I Do
         </motion.p>
       </motion.div>
 
       <motion.div
         variants={containerVariants}
-        className="flex mt-20 w-full flex-wrap flex-col justify-around"
+        className="flex mt-10 sm:mt-16 lg:mt-20 w-full max-w-6xl flex-wrap flex-col justify-around gap-6 sm:gap-8 lg:gap-12"
+      >
+        {services.map((item, index) => (
+          <motion.div
+            key={item.id}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2, margin: "0px 0px -100px 0px" }}
+            className="flex flex-col sm:flex-row w-full p-6 sm:p-8 lg:p-12 xl:p-16 mx-1 sm:mx-2 border-2 sm:border-3 border-[#EFE9DD] items-center justify-center sm:justify-between will-change-transform rounded-lg hover:shadow-lg transition-shadow duration-300"
+          >
+            <div className="flex flex-col text-center sm:text-left w-full">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#C6BEAD] font-bold mb-3 sm:mb-4 leading-tight">
+                {item.title}
+              </h2>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-3xl">
+                {item.description}
+              </p>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Services Grid Layout Alternative - Uncomment for card-style layout */}
+      {/* 
+      <motion.div
+        variants={containerVariants}
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mt-10 sm:mt-16 lg:mt-20 w-full max-w-6xl px-4"
       >
         {services.map((item) => (
           <motion.div
@@ -157,36 +183,47 @@ const Services = () => {
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2, margin: "0px 0px -100px 0px" }}
-            className="flex  w-full p-40  mx-1 border-3 border-[#EFE9DD]  items-center justify-around will-change-transform"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex flex-col p-6 sm:p-8 border-2 border-[#EFE9DD] rounded-lg hover:shadow-lg transition-all duration-300 will-change-transform hover:border-[#C6BEAD]"
+            whileHover={{ 
+              y: -5,
+              transition: { duration: 0.2 }
+            }}
           >
-           
-              <h2 className="text-6xl text-[#C6BEAD] font-bold mt-4">
-                {item.title}
-              </h2>
-           
-              <p className="text-lg text-gray-600 mt-2">{item.description}</p>
+            <h3 className="text-xl sm:text-2xl lg:text-3xl text-[#C6BEAD] font-bold mb-3 sm:mb-4">
+              {item.title}
+            </h3>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+              {item.description}
+            </p>
           </motion.div>
         ))}
       </motion.div>
+      */}
 
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={wordVariants}
-        className="h-screen w-full bg-[#EFE9DD] flex flex-col items-center justify-center will-change-transform"
+        className="min-h-screen w-full bg-[#EFE9DD] flex flex-col items-center justify-center will-change-transform px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 mt-12 sm:mt-16 lg:mt-20"
       >
-        <motion.h1 variants={wordVariants} className="text-9xl text-[#C6BEAD]">
+        <motion.h1 
+          variants={wordVariants} 
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-[#C6BEAD] text-center leading-tight mb-4 sm:mb-6"
+        >
           Let's Collaborate
         </motion.h1>
-        <motion.p variants={wordVariants} className="text-2xl text-gray-600">
+        <motion.p 
+          variants={wordVariants} 
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 text-center max-w-4xl leading-relaxed px-4"
+        >
           If you are interested in collaborating or have any questions, feel
           free to reach out!
         </motion.p>
         <motion.a
           href="mailto:mhalwasoffice@gmail.com"
-          className="mt-4 px-6 py-3 flex items-center bg-[#C6BEAD] text-white text-lg rounded-lg transition-colors duration-300 will-change-transform"
+          className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 flex items-center bg-[#C6BEAD] text-white text-base sm:text-lg rounded-lg transition-colors duration-300 will-change-transform hover:shadow-lg"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{
