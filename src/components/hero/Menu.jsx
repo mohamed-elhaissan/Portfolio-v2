@@ -13,7 +13,7 @@ const Menu = ({setIsOpen}) => {
       animate="visible"
       exit="exit"
       variants={menuVariants}
-      className="fixed  left-0 top-0 w-full z-40 bg-white h-screen  "
+      className="  absolute left-0 top-0 w-full z-40 bg-white h-screen  "
      
     >
       <motion.div
