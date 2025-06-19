@@ -1,18 +1,5 @@
 # 🚀 Personal Portfolio Website
 
-<div align="center">
-  <img src="https://your-domain.com/portfolio-banner.png" alt="Portfolio Banner" width="100%">
-
-  <a href="https://your-portfolio-url.com">
-    <img src="https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel" alt="Live Demo">
-  </a>
-  <a href="https://github.com/yourusername/portfolio">
-    <img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub Repo">
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="License">
-  </a>
-</div>
 
 > A modern, responsive portfolio website built with React, showcasing my work, services, and professional journey.
 
@@ -47,7 +34,7 @@
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/mohamed-elhaissan/Portfolio-v2.git
 cd portfolio
 
 # Install dependencies
