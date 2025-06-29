@@ -79,18 +79,18 @@ const Contact = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-screen text-black bg-[#EFE9DD] w-full flex flex-col items-center justify-center py-20 px-4 will-change-transform"
+      className="min-h-screen text-black  w-full flex flex-col items-center justify-center py-20 px-4 will-change-transform"
     >
       <motion.h1
         variants={titleVariants}
-        className="text-6xl md:text-9xl text-[#C6BEAD] text-center mb-6 will-change-transform"
+        className="text-6xl md:text-9xl text-[#7EA0F4] text-center mb-6 will-change-transform"
       >
         Contact Me
       </motion.h1>
 
       <motion.p
         variants={subtitleVariants}
-        className="text-lg md:text-2xl text-gray-600 text-center max-w-2xl mb-8"
+        className="text-lg md:text-2xl text-white text-center max-w-2xl mb-8"
       >
         If you are interested in collaborating or have any questions, feel free
         to reach out!
@@ -111,7 +111,7 @@ const Contact = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <label htmlFor="name" className="text-gray-700 font-medium mb-2">
+            <label htmlFor="name" className="text-[#809CFA] font-medium mb-2">
               Name *
             </label>
             <motion.input
@@ -119,7 +119,7 @@ const Contact = () => {
               id="name"
               name="name"
               placeholder="Enter your name"
-              className="bg-[#FAF8F1] border-2 border-transparent rounded-lg py-3 px-4 w-full focus:outline-none focus:border-[#C6BEAD] transition-all duration-300 will-change-transform"
+              className="bg-white border-2 border-transparent rounded-lg py-3 px-4 w-full focus:outline-none focus:border-[#7EA0F4] transition-all duration-300 will-change-transform"
               whileFocus={{ scale: 1.02, borderColor: "#C6BEAD" }}
               required
             />
@@ -131,7 +131,7 @@ const Contact = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <label htmlFor="lastName" className="text-gray-700 font-medium mb-2">
+            <label htmlFor="lastName" className="text-[#809CFA] font-medium mb-2">
               Last Name *
             </label>
             <motion.input
@@ -139,7 +139,7 @@ const Contact = () => {
               id="lastName"
               name="lastName"
               placeholder="Enter your last name"
-              className="bg-[#FAF8F1] border-2 border-transparent rounded-lg py-3 px-4 w-full focus:outline-none focus:border-[#C6BEAD] transition-all duration-300 will-change-transform"
+              className="bg-white border-2 border-transparent rounded-lg py-3 px-4 w-full focus:outline-none focus:border-[#7EA0F4] transition-all duration-300 will-change-transform"
               whileFocus={{ scale: 1.02, borderColor: "#C6BEAD" }}
               required
             />
@@ -156,7 +156,7 @@ const Contact = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <label htmlFor="company" className="text-gray-700 font-medium mb-2">
+            <label htmlFor="company" className="text-[#809CFA] font-medium mb-2">
               Company Name
             </label>
             <motion.input
@@ -164,7 +164,7 @@ const Contact = () => {
               id="company"
               name="company"
               placeholder="Enter your company name"
-              className="bg-[#FAF8F1] border-2 border-transparent rounded-lg py-3 px-4 w-full focus:outline-none focus:border-[#C6BEAD] transition-all duration-300 will-change-transform"
+              className="bg-white border-2 border-transparent rounded-lg py-3 px-4 w-full focus:outline-none focus:border-[#7EA0F4] transition-all duration-300 will-change-transform"
               whileFocus={{ scale: 1.02, borderColor: "#C6BEAD" }}
             />
           </motion.div>
@@ -175,7 +175,7 @@ const Contact = () => {
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <label htmlFor="email" className="text-gray-700 font-medium mb-2">
+            <label htmlFor="email" className="text-[#809CFA] font-medium mb-2">
               Email *
             </label>
             <motion.input
@@ -183,7 +183,7 @@ const Contact = () => {
               id="email"
               name="email"
               placeholder="Enter your email address"
-              className="bg-[#FAF8F1] border-2 border-transparent rounded-lg py-3 px-4 w-full focus:outline-none focus:border-[#C6BEAD] transition-all duration-300 will-change-transform"
+              className="bg-white border-2 border-transparent rounded-lg py-3 px-4 w-full focus:outline-none focus:border-[#7EA0F4] transition-all duration-300 will-change-transform"
               whileFocus={{ scale: 1.02, borderColor: "#C6BEAD" }}
               required
             />
@@ -196,14 +196,14 @@ const Contact = () => {
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.2 }}
         >
-          <label htmlFor="message" className="text-gray-700 font-medium mb-2 block">
+          <label htmlFor="message" className="text-[#809CFA] font-medium mb-2 block">
             Message *
           </label>
           <motion.textarea
             id="message"
             name="message"
             placeholder="Tell me about your project or question..."
-            className="bg-[#FAF8F1] border-2 border-transparent rounded-lg py-3 px-4 w-full h-32 resize-none focus:outline-none focus:border-[#C6BEAD] transition-all duration-300 will-change-transform"
+            className="bg-white border-2  rounded-lg py-3 px-4 w-full h-32 resize-none focus:outline-none focus:border-[#7EA0F4] transition-all duration-300 will-change-transform"
             whileFocus={{ scale: 1.01, borderColor: "#C6BEAD" }}
             required
           />
@@ -215,7 +215,7 @@ const Contact = () => {
         >
           <motion.button
             type="submit"
-            className="bg-[#C6BEAD] cursor-pointer font-semibold py-4 px-12 rounded-lg shadow-lg transition-all duration-300 will-change-transform"
+            className="bg-[#809CFA] cursor-pointer font-semibold py-4 px-12 rounded-lg shadow-lg transition-all duration-300 will-change-transform"
             whileHover={{
               scale: 1.05,
               backgroundColor: "#A89F8D",

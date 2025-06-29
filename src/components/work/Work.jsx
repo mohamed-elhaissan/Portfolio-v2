@@ -218,7 +218,8 @@ const Work = () => {
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{
-            backgroundColor: "#A89F8D",
+            backgroundColor: "#D0BAFD",
+            color : "black",
             scale: 1.05,
             transition: { duration: 0.2 },
           }}
