@@ -1,7 +1,7 @@
 import Header from "./Header";
 import { motion } from "motion/react";
 
-const secondLine = `A passionate full-stack developer who builds fast, functional, and beautiful web experiences.`;
+const secondLine = `A passionate full-stack developer who builds fast, functional, and beautiful web experiences`;
 
 // Container animation variants
 const containerVariants = {
@@ -75,7 +75,7 @@ const Hero = () => {
   return (
     <motion.div
       variants={containerVariants}
-      className="flex relative flex-col text-black items-center justify-center w-full flex-1"
+      className="flex relative flex-col  items-center justify-center w-full flex-1"
       style={{ zIndex: 1 }}
     >
       <motion.span
@@ -97,7 +97,7 @@ const Hero = () => {
         variants={titleVariants}
         className="text-6xl md:text-9xl flex flex-wrap gap-4 md:gap-10 justify-center items-center"
       >
-        <motion.div variants={titleVariants}>
+        <motion.div  variants={titleVariants}>
           {"Iam".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
@@ -113,7 +113,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        <motion.div variants={titleVariants}>
+        <motion.div variants={titleVariants} className="text-[#4EF9DB]">
           {"Mohamed".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
@@ -129,7 +129,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        <motion.div variants={titleVariants}>
+        <motion.div variants={titleVariants} className="text-[#809CFA]">
           {"elhaissan —".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
@@ -150,7 +150,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         transition={{ staggerChildren: 0.04, delayChildren: 1.2 }}
-        className="text-2xl md:text-5xl mt-8 text-center max-w-4xl px-4"
+        className="text-2xl md:text-5xl  mt-8 text-center max-w-4xl px-4"
       >
         {secondLine.split(" ").map((word, index) => (
           <motion.span

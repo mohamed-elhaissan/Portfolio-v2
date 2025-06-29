@@ -11,7 +11,7 @@ const Work = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15, 
+        staggerChildren: 0.15,
         delayChildren: 0.1,
       },
     },
@@ -121,19 +121,19 @@ const Work = () => {
       >
         <motion.h1
           variants={titleVariants}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#C6BEAD] will-change-transform"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#809CFA] will-change-transform"
         >
           {"Work".split("").map((char, index) => (
             <motion.span
               style={{ display: "inline-block" }}
               variants={charVariants}
-              whileHover={{ 
-                scale: 1.05, 
-                transition: { duration: 0.2 } 
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.2 },
               }}
-              whileTap={{ 
+              whileTap={{
                 scale: 0.95,
-                transition: { duration: 0.1 }
+                transition: { duration: 0.1 },
               }}
               key={index}
             >
@@ -143,7 +143,7 @@ const Work = () => {
         </motion.h1>
         <motion.p
           variants={wordVariants}
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-4"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white xl:text-4xl mt-2 sm:mt-4"
         >
           Explore My Work
         </motion.p>
@@ -161,23 +161,27 @@ const Work = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2, margin: "0px 0px -100px 0px" }}
             className={`flex ${
-              index % 2 === 0 ? 'flex-col sm:flex-row-reverse' : 'flex-col sm:flex-row'
-            } mx-1 sm:mx-2 lg:mx-4 border-2 sm:border-3 border-[#EFE9DD] p-3 sm:p-4 lg:p-6 items-center justify-around will-change-transform mb-6 sm:mb-8 lg:mb-12 rounded-lg`}
+              index % 2 === 0
+                ? "flex-col sm:flex-row-reverse"
+                : "flex-col sm:flex-row"
+            } mx-1 sm:mx-2 lg:mx-4 border-2 sm:border-3 border-[#CCBAFC] p-3 sm:p-4 lg:p-6 items-center justify-around will-change-transform mb-6 sm:mb-8 lg:mb-12 rounded-lg`}
           >
             <motion.img
               src={item.image}
               alt={item.title}
               className="w-full sm:w-2/5 lg:w-1/3 xl:w-1/4 rounded-lg shadow-lg will-change-transform mb-4 sm:mb-0"
-              loading="lazy" 
-              whileHover={{ 
+              loading="lazy"
+              whileHover={{
                 scale: 1.02,
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
             />
-            <motion.div className={`flex-1 text-center sm:text-left ${
-              index % 2 === 0 ? 'sm:mr-6 lg:mr-8' : 'sm:ml-6 lg:ml-8'
-            }`}>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#C6BEAD] font-bold mt-2 sm:mt-4 leading-tight">
+            <motion.div
+              className={`flex-1 text-center sm:text-left ${
+                index % 2 === 0 ? "sm:mr-6 lg:mr-8" : "sm:ml-6 lg:ml-8"
+              }`}
+            >
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#C0E0FA]  mt-2 sm:mt-4 leading-tight">
                 {item.title}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 mt-2 leading-relaxed px-2 sm:px-0">
@@ -193,11 +197,11 @@ const Work = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={wordVariants}
-        className="min-h-screen w-full bg-[#EFE9DD] flex flex-col items-center justify-center will-change-transform px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
+        className="min-h-screen w-full bg-[#809CFA] flex flex-col items-center justify-center will-change-transform px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
       >
         <motion.h1
           variants={wordVariants}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-[#C6BEAD] text-center leading-tight mb-4 sm:mb-6"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-black text-center leading-tight mb-4 sm:mb-6"
         >
           Let's Collaborate
         </motion.h1>
@@ -210,17 +214,17 @@ const Work = () => {
         </motion.p>
         <motion.a
           href="mailto:mhalwasoffice@gmail.com"
-          className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 flex items-center bg-[#C6BEAD] text-white text-base sm:text-lg rounded-lg transition-colors duration-300 will-change-transform hover:shadow-lg"
+          className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 flex items-center bg-black text-white text-base sm:text-lg rounded-lg transition-colors duration-300 will-change-transform hover:shadow-lg"
           target="_blank"
           rel="noopener noreferrer"
-          whileHover={{ 
+          whileHover={{
             backgroundColor: "#A89F8D",
             scale: 1.05,
-            transition: { duration: 0.2 }
+            transition: { duration: 0.2 },
           }}
-          whileTap={{ 
+          whileTap={{
             scale: 0.98,
-            transition: { duration: 0.1 }
+            transition: { duration: 0.1 },
           }}
         >
           <span>Contact Me</span>

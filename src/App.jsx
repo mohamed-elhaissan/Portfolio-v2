@@ -19,7 +19,7 @@ function App() {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="flex textFont flex-col border text-white items-center justify-start min-h-screen relative"
+      className="flex textFont flex-col  text-white items-center justify-start min-h-screen relative"
     >
       <div className="relative z-50 w-full" style={{ zIndex: 100 }}>
         <Header />

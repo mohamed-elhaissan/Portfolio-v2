@@ -5,7 +5,7 @@ import arrow from "../../assets/arrow-right-long-line.svg";
 import { menuVariants } from "../variants";
 import { menuItemVariants } from "../variants";
 
-const Menu = ({setIsOpen}) => {
+const Menu = ({ setIsOpen }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <motion.nav
@@ -13,17 +13,16 @@ const Menu = ({setIsOpen}) => {
       animate="visible"
       exit="exit"
       variants={menuVariants}
-      className="  absolute left-0 top-0 w-full z-40 bg-white h-screen  "
-     
+      className="  absolute left-0 top-0 w-full z-40 bg-black h-screen  "
     >
       <motion.div
         variants={menuItemVariants}
         initial="hidden"
         animate="visible"
-        className="w-full h-full absolute top-0 left-0 bg-[#EFE9DD]"
+        className="w-full h-full absolute top-0 left-0 bg-[#101010]"
       />
       <motion.ul
-      onClick={() => setIsOpen(false)}
+        onClick={() => setIsOpen(false)}
         initial={{
           opacity: 0,
           y: "-100%",
@@ -40,7 +39,7 @@ const Menu = ({setIsOpen}) => {
         className="flex  space-x-4 flex-col items-start gap-10 justify-evenly relative   h-full text-9xl"
       >
         <li
-          className=" border-b-2 w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#C6BEAD] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
+          className=" border-b-2 border-[#809CFA] w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#809CFA] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
           onMouseEnter={() => setIsHovered("home")}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -59,7 +58,7 @@ const Menu = ({setIsOpen}) => {
           </Link>
         </li>
         <li
-          className=" border-b-2 w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#C6BEAD] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
+          className=" border-b-2 border-[#809CFA] w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#809CFA] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
           onMouseEnter={() => setIsHovered("work")}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -78,7 +77,7 @@ const Menu = ({setIsOpen}) => {
           </Link>
         </li>
         <li
-          className=" border-b-2 w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#C6BEAD] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
+          className=" border-b-2 border-[#809CFA] w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#809CFA] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
           onMouseEnter={() => setIsHovered("services")}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -97,7 +96,7 @@ const Menu = ({setIsOpen}) => {
           </Link>
         </li>
         <li
-          className=" border-b-2 w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#C6BEAD] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
+          className=" border-b-2 border-[#809CFA] w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#809CFA] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
           onMouseEnter={() => setIsHovered("contact")}
           onMouseLeave={() => setIsHovered(false)}
         >

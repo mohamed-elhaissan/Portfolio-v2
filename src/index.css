@@ -4,7 +4,7 @@
   box-sizing: border-box  ;
 }
 :root {
-  --color-primary:#FAF8F1;
+  --color-primary:#101010;
   --secondary-color: #099DD5;
   --secondary-font: "Poppins", sans-serif;
   --links-color: #FFFFFF99
@@ -13,8 +13,8 @@
 
 body {
   background-color: var(--color-primary);
-}
 
+}
 
 
 

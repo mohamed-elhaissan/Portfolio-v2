@@ -31,9 +31,9 @@ const Header = () => {
       animate="visible"
       variants={headerVariants}
       exit="hidden"
-      className="flex items-center justify-between w-full p-6  text-black"
+      className="flex items-center justify-between w-full p-6  "
     >
-      <Link to="/" className="text-2xl font-bold hover:underline">
+      <Link to="/" className="text-2xl   hover:text-[#4EF9D9]">
         elhaissan.dev
       </Link>
 
@@ -41,7 +41,7 @@ const Header = () => {
         onClick={() => {
           setIsOpen(!isOpen);
         }}
-        className="relative  text-2xl font-bold hover:underline cursor-pointer"
+        className="relative  text-2xl   hover:text-[#4EF9D9] cursor-pointer"
       style={{ zIndex: 9999 }}
       >
         {isOpen ? <span>Close</span> : <span>Menu</span>}
