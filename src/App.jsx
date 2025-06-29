@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
 import AppRoutes from "./AppRoutes";
 import Header from "./components/hero/Header";
 import { motion } from "motion/react";
+import Loader from "./components/Loader";
 
 function App() {
+  const [isLoading, setISLoading] = useState(true);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -13,6 +17,15 @@ function App() {
       },
     },
   };
+
+  useEffect(() => {
+    if (document.readyState === "complete") {
+      setISLoading(false);
+    }
+  }, []);
+  if (isLoading) {
+    return <Loader />;
+  }
   return (
     <motion.div
       initial="hidden"
