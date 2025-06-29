@@ -1,5 +1,4 @@
 import AppRoutes from "./AppRoutes";
-import Hero from "./components/hero/Hero";
 import Header from "./components/hero/Header";
 import { motion } from "motion/react";
 

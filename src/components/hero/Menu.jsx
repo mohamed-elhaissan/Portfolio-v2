@@ -67,7 +67,7 @@ const Menu = ({ setIsOpen }) => {
             className="z-10 relative flex  items-center justify-between"
           >
             Work
-            {isHovered === "about" && (
+            {isHovered === "work" && (
               <img
                 src={arrow}
                 alt="arrow"
@@ -86,7 +86,7 @@ const Menu = ({ setIsOpen }) => {
             className="z-10 relative flex  items-center justify-between"
           >
             Services
-            {isHovered === "work" && (
+            {isHovered === "services" && (
               <img
                 src={arrow}
                 alt="arrow"
@@ -97,15 +97,53 @@ const Menu = ({ setIsOpen }) => {
         </li>
         <li
           className=" border-b-2 border-[#809CFA] w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#809CFA] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
-          onMouseEnter={() => setIsHovered("contact")}
+          onMouseEnter={() => setIsHovered("Github")}
           onMouseLeave={() => setIsHovered(false)}
         >
           <Link
-            to="/contact"
+            to="https://github.com/mohamed-elhaissan"
             className="z-10 relative flex  items-center justify-between"
           >
-            Contact
-            {isHovered === "contact" && (
+            Github
+            {isHovered === "Github" && (
+              <img
+                src={arrow}
+                alt="arrow"
+                className="w-20 h-20 transition-transform duration-300 transform hover:translate-x-2"
+              />
+            )}
+          </Link>
+        </li>
+        <li
+          className=" border-b-2 border-[#809CFA] w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#809CFA] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
+          onMouseEnter={() => setIsHovered("Linkedin")}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <Link
+            to="https://www.linkedin.com/in/mohamed-elhaissan-050509301/"
+            className="z-10 relative flex  items-center justify-between"
+          >
+            Linkedin
+            {isHovered === "Linkedin" && (
+              <img
+                src={arrow}
+                alt="arrow"
+                className="w-20 h-20 transition-transform duration-300 transform hover:translate-x-2"
+              />
+            )}
+          </Link>
+        </li>
+        <li
+          className=" border-b-2 border-[#809CFA] w-full h-full p-10 before:content-[''] before:absolute before:top-0 before:translate-y-full before:left-0 before:w-full before:h-full before:bg-[#809CFA] z-0  hover:before:translate-y-0 overflow-hidden before:transition-transform before:ease-in-out before:duration-300 relative"
+          onMouseEnter={() => setIsHovered("Instagram")}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <Link
+            to="https://www.instagram.com/mohamed_elhaissan/"
+            className="z-10 relative flex  items-center justify-between"
+          >
+            Instagram
+            {isHovered === "Instagram" && (
               <img
                 src={arrow}
                 alt="arrow"

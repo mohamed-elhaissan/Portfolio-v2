@@ -1,5 +1,7 @@
 import Header from "./Header";
 import { motion } from "motion/react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+
 
 const secondLine = `A passionate full-stack developer who builds fast, functional, and beautiful web experiences`;
 
@@ -97,7 +99,7 @@ const Hero = () => {
         variants={titleVariants}
         className="text-6xl md:text-9xl flex flex-wrap gap-4 md:gap-10 justify-center items-center"
       >
-        <motion.div  variants={titleVariants}>
+        <motion.div variants={titleVariants}>
           {"Iam".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
@@ -189,6 +191,7 @@ const Hero = () => {
         }}
         className="absolute top-1/3 right-16 w-1 h-1 bg-black rounded-full opacity-30"
       />
+     
     </motion.div>
   );
 };
