@@ -78,7 +78,7 @@ const Hero = () => {
     <motion.div
       variants={containerVariants}
       className="flex relative flex-col  items-center justify-center w-full flex-1"
-      style={{ zIndex: 1 }}
+  
     >
       <motion.span
         initial={{ opacity: 0, scale: 0, rotate: -180 }}
@@ -90,7 +90,7 @@ const Hero = () => {
           damping: 15,
           stiffness: 200,
         }}
-        className="text-2xl mb-4"
+        className="text-2xl mb-4 text-[var(--text-color-secondary)] items-center "
       >
         (*)
       </motion.span>
@@ -99,7 +99,7 @@ const Hero = () => {
         variants={titleVariants}
         className="text-6xl md:text-9xl flex flex-wrap gap-4 md:gap-10 justify-center items-center"
       >
-        <motion.div variants={titleVariants}>
+        <motion.div variants={titleVariants} className="text-[var(--text-color-secondary)]">
           {"Iam".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
@@ -115,7 +115,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        <motion.div variants={titleVariants} className="text-[#4EF9DB]">
+        <motion.div variants={titleVariants} className="text-[var(--text-color-secondary)]">
           {"Mohamed".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
@@ -131,7 +131,7 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        <motion.div variants={titleVariants} className="text-[#809CFA]">
+        <motion.div variants={titleVariants} className="text-[var(--text-color-secondary)]">
           {"elhaissan —".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
@@ -152,7 +152,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         transition={{ staggerChildren: 0.04, delayChildren: 1.2 }}
-        className="text-2xl md:text-5xl  mt-8 text-center max-w-4xl px-4"
+        className="text-2xl md:text-5xl  mt-8 text-center max-w-4xl px-4 text-[var(--text-color)]"
       >
         {secondLine.split(" ").map((word, index) => (
           <motion.span

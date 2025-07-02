@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import Loader from "./components/Loader";
 
 function App() {
-  const [isLoading, setISLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -19,25 +19,35 @@ function App() {
   };
 
   useEffect(() => {
+    const handleLoader = () => {
+      setIsLoading(false);
+    };
     if (document.readyState === "complete") {
-      setISLoading(false);
+      setIsLoading(false);
+    } else {
+      window.addEventListener("load", handleLoader);
     }
+    return () => {
+      window.removeEventListener("load", handleLoader);
+    };
   }, []);
-  if (isLoading) {
-    return <Loader />;
-  }
+
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-      className="flex textFont flex-col  text-white items-center justify-start min-h-screen relative"
-    >
-      <div className="relative z-50 w-full" style={{ zIndex: 100 }}>
-        <Header />
-      </div>
-      <AppRoutes />
-    </motion.div>
+    <>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <motion.div
+          className="flex textFont flex-col  text-white items-center justify-start min-h-screen relative"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <Header />
+          <AppRoutes />
+        </motion.div>
+      )}
+    </>
   );
 }
 

@@ -1,36 +1,39 @@
 @import "tailwindcss";
 
 * {
-  box-sizing: border-box  ;
+  box-sizing: border-box;
 }
 :root {
-  --color-primary:#101010;
-  --secondary-color: #099DD5;
+  --text-color: #121418;
+  --text-color-secondary: #171717;
+  --color-primary: #fefefe;
+  --body-background: #fff;
+  --secondary-color: #099dd5;
   --secondary-font: "Poppins", sans-serif;
-  --links-color: #FFFFFF99
-;
+  --links-color: #ffffff99;
 }
 
 body {
-  background-color: var(--color-primary);
-
+  background-color: var(--body-background);
+}
+li {
+  list-style: none;
 }
 
-
-
-
- @font-face {
+@font-face {
   font-family: "MyCustomFont";
-  src: url('./fonts/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+  src: url("./fonts/PPEditorialNew-Regular-BF644b214ff145f.otf")
+    format("opentype");
   font-style: normal;
   font-weight: 400;
- }
- @font-face {
+}
+@font-face {
   font-family: "light";
-  src: url('./fonts/PPEditorialNew-Ultralight-BF644b21500d0c0.otf') format('opentype');
+  src: url("./fonts/PPEditorialNew-Ultralight-BF644b21500d0c0.otf")
+    format("opentype");
   font-style: normal;
   font-weight: 400;
- }
+}
 
 body {
   font-family: "MyCustomFont";
