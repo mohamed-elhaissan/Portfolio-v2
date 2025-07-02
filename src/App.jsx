@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import AppRoutes from "./AppRoutes";
+
 import Header from "./components/hero/Header";
 import { motion } from "motion/react";
 import Loader from "./components/Loader";
-
+import Hero from "./components/hero/Hero";
+import Services from "./components/services/Services";
+import Work from "./components/work/Work";
+import About from "./components/About/About";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,13 +41,18 @@ function App() {
         <Loader />
       ) : (
         <motion.div
-          className="flex textFont flex-col  text-white items-center justify-start min-h-screen relative"
+          className="flex textFont flex-col   text-white items-center justify-start min-h-screen relative"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
-          <Header />
-          <AppRoutes />
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <Hero />
+          </div>
+          <About />
+          <Services />
+          <Work />
         </motion.div>
       )}
     </>

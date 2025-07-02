@@ -2,8 +2,7 @@ import Header from "./Header";
 import { motion } from "motion/react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-
-const secondLine = `A passionate full-stack developer who builds fast, functional, and beautiful web experiences`;
+const secondLine = `Great design needs great code. Great code needs great design. I deliver both.`;
 
 // Container animation variants
 const containerVariants = {
@@ -77,8 +76,7 @@ const Hero = () => {
   return (
     <motion.div
       variants={containerVariants}
-      className="flex relative flex-col  items-center justify-center w-full flex-1"
-  
+      className="flex relative flex-col   items-center justify-center w-full flex-1"
     >
       <motion.span
         initial={{ opacity: 0, scale: 0, rotate: -180 }}
@@ -99,8 +97,11 @@ const Hero = () => {
         variants={titleVariants}
         className="text-6xl md:text-9xl flex flex-wrap gap-4 md:gap-10 justify-center items-center"
       >
-        <motion.div variants={titleVariants} className="text-[var(--text-color-secondary)]">
-          {"Iam".split("").map((char, index) => (
+        <motion.div
+          variants={titleVariants}
+          className="text-[var(--text-color-secondary)]"
+        >
+          {"Hey ,Iam".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
               style={{
@@ -115,7 +116,10 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        <motion.div variants={titleVariants} className="text-[var(--text-color-secondary)]">
+        <motion.div
+          variants={titleVariants}
+          className="text-[var(--text-color-secondary)]"
+        >
           {"Mohamed".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
@@ -131,8 +135,11 @@ const Hero = () => {
           ))}
         </motion.div>
 
-        <motion.div variants={titleVariants} className="text-[var(--text-color-secondary)]">
-          {"elhaissan —".split("").map((char, index) => (
+        <motion.div
+          variants={titleVariants}
+          className="text-[var(--text-color-secondary)]"
+        >
+          {"elhaissan".split("").map((char, index) => (
             <motion.span
               variants={charVariants}
               style={{
@@ -152,7 +159,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         transition={{ staggerChildren: 0.04, delayChildren: 1.2 }}
-        className="text-2xl md:text-5xl  mt-8 text-center max-w-4xl px-4 text-[var(--text-color)]"
+        className="text-xl md:text-4xl text-zinc-600  mt-8 text-center max-w-4xl px-4 "
       >
         {secondLine.split(" ").map((word, index) => (
           <motion.span
@@ -191,7 +198,6 @@ const Hero = () => {
         }}
         className="absolute top-1/3 right-16 w-1 h-1 bg-black rounded-full opacity-30"
       />
-     
     </motion.div>
   );
 };
