@@ -121,6 +121,7 @@ const work = [
 
   return (
     <motion.div
+    id="work"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

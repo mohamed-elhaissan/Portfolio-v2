@@ -38,7 +38,7 @@ Let's build something that matters.`;
     },
   };
   return (
-    <div className="p-20 my-20 text-center    flex flex-col items-center justify-center ">
+    <div id="about" className="p-20 my-20 text-center     flex flex-col items-center justify-center ">
       <motion.h1
         variants={titleVariants}
         className="text-4xl sm:text-6xl md:text-7xl md lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"

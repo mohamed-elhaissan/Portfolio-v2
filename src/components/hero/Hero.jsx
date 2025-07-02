@@ -76,8 +76,9 @@ const Hero = () => {
   return (
     <motion.div
       variants={containerVariants}
-      className="flex relative flex-col    items-center justify-center w-full flex-1"
+      className="flex relative flex-col     items-center justify-center w-full flex-1"
     >
+     
       <motion.span
         initial={{ opacity: 0, scale: 0, rotate: -180 }}
         animate={{ opacity: 1, scale: 1, rotate: 0 }}
