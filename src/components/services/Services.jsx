@@ -120,7 +120,7 @@ const Services = () => {
           variants={titleVariants}
           className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#809CFA] will-change-transform"
         >
-          {"Services".split("").map((char, index) => (
+          {"Here's What I Do.".split(" ").map((char, index) => (
             <motion.span
               style={{ display: "inline-block" }}
               variants={charVariants}
@@ -133,17 +133,13 @@ const Services = () => {
                 transition: { duration: 0.1 },
               }}
               key={index}
+              className="mx-5 text-[var(--text-color-secondary)] hover:text-[#FF8200] transition-colors duration-300 will-change-transform"
             >
               {char}
             </motion.span>
           ))}
         </motion.h1>
-        <motion.p 
-          variants={wordVariants} 
-          className="text-lg text-white sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-4"
-        >
-          What I Do
-        </motion.p>
+     
       </motion.div>
 
       <motion.div

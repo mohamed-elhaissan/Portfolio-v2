@@ -1,34 +1,75 @@
+import { motion } from "motion/react";
+
 const About = () => {
  
-const abouMe = `I'm Mohamed. Full-stack developer in Casablanca.
+const aboutME  =`Mohamed Elhaissan. Full-stack developer.
 
-**Here's what I actually do:** I build web applications that convert. Not just "look good" - actually drive results while your competitors are still loading.
+I turn broken ideas into working applications. Fast load times, clean code, zero drama.
 
-Most designers can't code. Most developers can't design. I do both. 
+Your users will thank you. Your competitors won't.
 
-React, Node.js, pixel-perfect interfaces that perform at 60fps. Performance isn't optional, it's standard.
-
-**The result?** Applications that don't just impress - they convert.
-
-Mint tea over coffee, always.
-
-**I don't just build websites. I build revenue generators`.split("**");
-  // This component is for the About section of the portfolio
+Let's build something that matters.`
+ const titleVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.05,
+      },
+    },
+  };
+    const charVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
   return (
-    <div className="w-full p-20">
-      <h2 className="sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] text-[var(--text-color-secondary)] text-left mt-20 sm:mt-24 md:mt-28 lg:mt-32 xl:mt-36 2xl:mt-40">
-        About
-      </h2>
+    <div className="p-20 h-[80vh] text-center  flex flex-col items-center justify-center ">
+       <motion.h1
+          variants={titleVariants}
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[var(--text-color)] will-change-transform"
+        >
+          {"About".split("").map((char, index) => (
+            <motion.span
+              style={{ display: "inline-block" }}
+              variants={charVariants}
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.2 },
+              }}
+              whileTap={{
+                scale: 0.95,
+                transition: { duration: 0.1 },
+              }}
+              className="hover:text-[#FF8200] text-[var(--text-color-secondary)]"
+              key={index}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </motion.h1>
       <div className="flex flex-wrap gap-2 mt-10 cursor-pointer ">
       
           {
-            abouMe.split(" ").map((text,index) => (
+            aboutME.split(" ").map((text,index) => (
             <div
             key={index}
-            style={{
-              fontWeight: index % 2 === 0 ? "normal" : "bold",
-            }}
-            className="text-lg sm:text-xl md:text-2xl opacity-70 hover:opacity-100 lg:text-3xl xl:text-4xl text-[var(--text-color-secondary)]"
+           
+            className="text-lg sm:text-xl md:text-2xl opacity-70 hover:opacity-100 lg:text-3xl xl:text-4xl text-[var(--text-color-secondary)] hover:text-[#FF8200]"
           >
             {text}
           </div>
@@ -36,6 +77,7 @@ Mint tea over coffee, always.
           }
         
       </div>
+      
     </div>
   );
 };
