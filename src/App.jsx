@@ -4,7 +4,6 @@ import Header from "./components/hero/Header";
 import { motion } from "motion/react";
 import Loader from "./components/Loader";
 import Hero from "./components/hero/Hero";
-import Services from "./components/services/Services";
 import Work from "./components/work/Work";
 import About from "./components/About/About";
 function App() {
@@ -51,7 +50,6 @@ function App() {
             <Hero />
           </div>
           <About />
-          <Services />
           <Work />
         </motion.div>
       )}

@@ -4,7 +4,7 @@ import work2 from "../../assets/work/Portfolio.svg";
 import work3 from "../../assets/work/Products.svg";
 import work4 from "../../assets/work/work.svg";
 import { motion } from "motion/react";
-
+import buzzlyImage from "../../assets/buzzly.svg"; 
 const Work = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -77,35 +77,47 @@ const Work = () => {
     },
   };
 
-  const work = [
-    {
-      id: 1,
-      title: "Chat Page Result (User)",
-      description:
-        "A user interface design for a chat application, showcasing the conversation layout and user interactions.",
-      image: work1,
-    },
-    {
-      id: 2,
-      title: "Stock Market Dashboard",
-      description:
-        "A sleek and modern interface for tracking stocks, portfolios, and market insights in real time.",
-      image: work2,
-    },
-    {
-      id: 4,
-      title: "E-Commerce Product Listing Page",
-      description:
-        "A minimal and user-friendly shop interface with advanced filters and responsive product grid",
-      image: work4,
-    },
-    {
-      id: 3,
-      title: "Digital Marketing Agency Website",
-      description: "Clean and modern platform for a digital marketing agency",
-      image: work3,
-    },
-  ];
+const work = [
+  {
+    id: 5,
+    title: "Buzzly - React Toast Notification Library",
+    description:
+      "A customizable and lightweight toast notification system built with React, Tailwind CSS, and Framer Motion. Designed for modern apps.",
+    image: buzzlyImage, // replace this with your actual Buzzly image import
+    technology: ["React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+  },
+  {
+    id: 1,
+    title: "Chat Page Result (User)",
+    description:
+      "A user interface design for a chat application, showcasing the conversation layout and user interactions.",
+    image: work1,
+    technology: ["React", "Tailwind CSS", "Framer Motion"],
+  },
+  {
+    id: 2,
+    title: "Stock Market Dashboard",
+    description:
+      "A sleek and modern interface for tracking stocks, portfolios, and market insights in real time.",
+    image: work2,
+    technology: ["React", "Recharts", "Tailwind CSS", "REST API"],
+  },
+  {
+    id: 4,
+    title: "E-Commerce Product Listing Page",
+    description:
+      "A minimal and user-friendly shop interface with advanced filters and responsive product grid.",
+    image: work4,
+    technology: ["React", "Tailwind CSS", "TypeScript", "Redux Toolkit"],
+  },
+  {
+    id: 3,
+    title: "Digital Marketing Agency Website",
+    description: "Clean and modern platform for a digital marketing agency.",
+    image: work3,
+    technology: ["React", "Tailwind CSS", "GSAP"],
+  }
+];
 
   return (
     <motion.div
@@ -121,7 +133,7 @@ const Work = () => {
       >
         <motion.h1
           variants={titleVariants}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#809CFA] will-change-transform"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[var(--text-color)] will-change-transform"
         >
           {"Work".split("").map((char, index) => (
             <motion.span
@@ -143,15 +155,16 @@ const Work = () => {
         </motion.h1>
         <motion.p
           variants={wordVariants}
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white xl:text-4xl mt-2 sm:mt-4"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-zinc-600  xl:text-4xl mt-2 sm:mt-4"
         >
           Explore My Work
         </motion.p>
+        <p>(all that work are avaible in my github )</p>
       </motion.div>
 
       <motion.div
         variants={containerVariants}
-        className="flex mt-10 sm:mt-16 lg:mt-20 flex-wrap flex-col justify-around w-full max-w-7xl"
+        className="flex mt-10 sm:mt-16 lg:mt-20 flex-wrap  justify-around w-full max-w-7xl"
       >
         {work.map((item, index) => (
           <motion.div
@@ -160,34 +173,41 @@ const Work = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2, margin: "0px 0px -100px 0px" }}
-            className={`flex ${
-              index % 2 === 0
-                ? "flex-col sm:flex-row-reverse"
-                : "flex-col sm:flex-row"
-            } mx-1 sm:mx-2 lg:mx-4 border-2 sm:border-3 border-[#CCBAFC] p-3 sm:p-4 lg:p-6 items-center justify-around will-change-transform mb-6 sm:mb-8 lg:mb-12 rounded-lg`}
+            className={`flex flex-col mx-1 sm:mx-2 lg:mx-4 border-2 sm:border-3 border-zinc-400 p-3 sm:p-4 lg:p-6 items-center justify-around will-change-transform mb-6 sm:mb-8 lg:mb-12 rounded-lg`}
           >
-            <motion.img
-              src={item.image}
-              alt={item.title}
-              className="w-full sm:w-2/5 lg:w-1/3 xl:w-1/4 rounded-lg shadow-lg will-change-transform mb-4 sm:mb-0"
-              loading="lazy"
-              whileHover={{
-                scale: 1.02,
-                transition: { duration: 0.3 },
-              }}
-            />
+           
             <motion.div
-              className={`flex-1 text-center sm:text-left ${
-                index % 2 === 0 ? "sm:mr-6 lg:mr-8" : "sm:ml-6 lg:ml-8"
-              }`}
+              className={`flex-1 text-center sm:text-left `}
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#C0E0FA]  mt-2 sm:mt-4 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[var(--text-color)]  mt-2 sm:mt-4 leading-tight">
                 {item.title}
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 mt-2 leading-relaxed px-2 sm:px-0">
                 {item.description}
               </p>
             </motion.div>
+             <motion.img
+              src={item.image}
+              alt={item.title}
+              className="w- rounded-lg shadow-lg will-change-transform mb-4 sm:mb-0"
+              loading="lazy"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            />
+            <div>
+              {
+                item.technology.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="inline-block mt-20 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-500 bg-gray-100 px-2 py-1 rounded-full mr-2 mb-2"
+                  >
+                    {tech}
+                  </span>
+                ))
+              }
+            </div>
           </motion.div>
         ))}
       </motion.div>

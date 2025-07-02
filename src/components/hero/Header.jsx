@@ -37,9 +37,7 @@ const Header = () => {
 
       <div>
         <nav className="flex  text-xl items-center justify-center gap-6  text-[var(--text-color)]">
-          <li >
-            <Link to={'/services'} className=" px-2 py-1 rounded-md hover:bg-[#f5f5f5]">services</Link>
-          </li>
+          
           <li>
             <Link to={'/work'} className=" px-2 py-1 rounded-md hover:bg-[#f5f5f5]">work</Link>
           </li>
