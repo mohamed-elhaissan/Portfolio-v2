@@ -40,7 +40,7 @@ function App() {
         <Loader />
       ) : (
         <motion.div
-          className="flex textFont flex-col   text-white items-center justify-start min-h-screen relative"
+          className="flex textFont flex-col selection:bg-[#FF8200] selection:text-black  text-white items-center justify-start min-h-screen relative"
           initial="hidden"
           animate="visible"
           variants={containerVariants}

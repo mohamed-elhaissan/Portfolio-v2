@@ -76,7 +76,7 @@ const Hero = () => {
   return (
     <motion.div
       variants={containerVariants}
-      className="flex relative flex-col   items-center justify-center w-full flex-1"
+      className="flex relative flex-col    items-center justify-center w-full flex-1"
     >
       <motion.span
         initial={{ opacity: 0, scale: 0, rotate: -180 }}
@@ -159,7 +159,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         transition={{ staggerChildren: 0.04, delayChildren: 1.2 }}
-        className="text-xl md:text-4xl text-[#163664]  mt-8 text-center max-w-4xl px-4 "
+        className="text-xl md:text-4xl text-[#163664] selection:bg-[#FF8200] selection:text-black  mt-8 text-center max-w-4xl px-4 "
       >
         {secondLine.split(" ").map((word, index) => (
           <motion.span
