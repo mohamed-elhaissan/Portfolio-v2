@@ -159,7 +159,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         transition={{ staggerChildren: 0.04, delayChildren: 1.2 }}
-        className="text-xl md:text-4xl text-zinc-600  mt-8 text-center max-w-4xl px-4 "
+        className="text-xl md:text-4xl text-[#163664]  mt-8 text-center max-w-4xl px-4 "
       >
         {secondLine.split(" ").map((word, index) => (
           <motion.span

@@ -5,7 +5,8 @@ import { motion } from "motion/react";
 import Loader from "./components/Loader";
 import Hero from "./components/hero/Hero";
 import Work from "./components/work/Work";
-import About from "./components/About/About";
+import About from "./components/about/about";
+import Contact from "./components/contact/Contact";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -18,8 +19,7 @@ function App() {
         delayChildren: 0.2,
       },
     },
-  };
-
+};
   useEffect(() => {
     const handleLoader = () => {
       setIsLoading(false);
@@ -51,6 +51,7 @@ function App() {
           </div>
           <About />
           <Work />
+          <Contact />
         </motion.div>
       )}
     </>

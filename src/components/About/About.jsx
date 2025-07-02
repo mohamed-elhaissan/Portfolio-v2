@@ -41,9 +41,9 @@ Let's build something that matters.`
     <div className="p-20 my-20 text-center  flex flex-col items-center justify-center ">
        <motion.h1
           variants={titleVariants}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[var(--text-color)] will-change-transform"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"
         >
-          {"About".split("").map((char, index) => (
+          {"Who Iam ?".split(" ").map((char, index) => (
             <motion.span
               style={{ display: "inline-block" }}
               variants={charVariants}
@@ -55,7 +55,7 @@ Let's build something that matters.`
                 scale: 0.95,
                 transition: { duration: 0.1 },
               }}
-              className="hover:text-[#FF8200] text-[var(--text-color-secondary)]"
+              className="mx-5 hover:text-[#FF8200] text-[#163664]"
               key={index}
             >
               {char}

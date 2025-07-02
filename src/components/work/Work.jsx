@@ -124,16 +124,17 @@ const work = [
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="flex relative flex-col text-black items-center justify-center w-full flex-1 px-4 sm:px-6 lg:px-8"
+      className="flex relative flex-col text-black items-center my-20 justify-center w-full flex-1 px-4 sm:px-6 lg:px-8 min-h-screen pt-20 sm:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36"
       style={{ zIndex: 1 }}
+      
     >
       <motion.div
         variants={titleVariants}
-        className="text-black text-center mt-10 sm:mt-16 lg:mt-20 leading-8 sm:leading-10"
+        className="text-black text-center  leading-8 sm:leading-10"
       >
         <motion.h1
           variants={titleVariants}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[var(--text-color)] will-change-transform"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"
         >
           {"Work".split("").map((char, index) => (
             <motion.span
@@ -159,21 +160,21 @@ const work = [
         >
           Explore My Work
         </motion.p>
-        <p>(all that work are avaible in my github )</p>
+        <p >(all that work are avaible in my github )</p>
       </motion.div>
 
       <motion.div
         variants={containerVariants}
-        className="flex mt-10 sm:mt-16 lg:mt-20 flex-wrap  justify-around w-full max-w-7xl"
+        className="flex mt-10 sm:mt-16 lg:mt-20 flex-wrap  justify-around w-full "
       >
-        {work.map((item, index) => (
+        {work.map((item,index) => (
           <motion.div
             key={item.id}
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2, margin: "0px 0px -100px 0px" }}
-            className={`flex flex-col mx-1 sm:mx-2 lg:mx-4 border-2 sm:border-3 border-zinc-400 p-3 sm:p-4 lg:p-6 items-center justify-around will-change-transform mb-6 sm:mb-8 lg:mb-12 rounded-lg`}
+            className={`flex ${!index %2 == 0 && "flex-row-reverse"} justify-between  mx-1 sm:mx-2 lg:mx-4  w-full border-[1px] border-[rgba(34, 34, 34, .1)] p-3 sm:p-4 lg:p-6 items-center gap-20  will-change-transform mb-6 sm:mb-8 lg:mb-12 rounded-lg`}
           >
            
             <motion.div
@@ -185,72 +186,34 @@ const work = [
               <p className="text-sm sm:text-base lg:text-lg text-gray-600 mt-2 leading-relaxed px-2 sm:px-0">
                 {item.description}
               </p>
-            </motion.div>
-             <motion.img
-              src={item.image}
-              alt={item.title}
-              className="w- rounded-lg shadow-lg will-change-transform mb-4 sm:mb-0"
-              loading="lazy"
-              whileHover={{
-                scale: 1.02,
-                transition: { duration: 0.3 },
-              }}
-            />
-            <div>
+                  <div>
               {
                 item.technology.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="inline-block mt-20 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-500 bg-gray-100 px-2 py-1 rounded-full mr-2 mb-2"
+                    className="inline-block  text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-[#163664] mt-5 bg-gray-100 px-2 py-1 rounded-full mr-2 mb-2"
                   >
                     {tech}
                   </span>
                 ))
               }
             </div>
+            </motion.div>
+             <motion.img
+              src={item.image}
+              alt={item.title}
+              className="w-1/3 rounded-lg shadow-lg will-change-transform mb-4 sm:mb-0"
+              loading="lazy"
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.3 },
+              }}
+            />
+        
           </motion.div>
         ))}
       </motion.div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={wordVariants}
-        className="min-h-screen w-full bg-[#809CFA] flex flex-col items-center justify-center will-change-transform px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
-      >
-        <motion.h1
-          variants={wordVariants}
-          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-black text-center leading-tight mb-4 sm:mb-6"
-        >
-          Let's Collaborate
-        </motion.h1>
-        <motion.p
-          variants={wordVariants}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 text-center max-w-4xl leading-relaxed px-4"
-        >
-          If you are interested in collaborating or have any questions, feel
-          free to reach out!
-        </motion.p>
-        <motion.a
-          href="mailto:mhalwasoffice@gmail.com"
-          className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-3 flex items-center bg-black text-white text-base sm:text-lg rounded-lg transition-colors duration-300 will-change-transform hover:shadow-lg"
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{
-            backgroundColor: "#D0BAFD",
-            color : "black",
-            scale: 1.05,
-            transition: { duration: 0.2 },
-          }}
-          whileTap={{
-            scale: 0.98,
-            transition: { duration: 0.1 },
-          }}
-        >
-          <span>Contact Me</span>
-        </motion.a>
-      </motion.div>
     </motion.div>
   );
 };
