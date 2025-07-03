@@ -1,3 +1,4 @@
+<img src="https://github.com/mohamed-elhaissan/Portfolio-v2/blob/main/src/assets/Screenshot.png" />
 # 🎨 Portfolio v2
 
 A sleek and modern developer portfolio I built to showcase my skills, projects, and personality. Inspired by clean design, performance, and accessibility — this site isn't just a résumé, it's an experience. I wanted every interaction to feel fast, smooth, and polished.
