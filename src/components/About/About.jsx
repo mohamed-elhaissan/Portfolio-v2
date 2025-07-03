@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import WordAnimated from "../wordAnimated.jsx";
 
 const About = () => {
   const aboutME = `Mohamed Elhaissan. Full-stack developer.
@@ -38,7 +38,10 @@ Let's build something that matters.`;
     },
   };
   return (
-    <div id="about" className="p-20 my-20 text-left     flex flex-col items-start justify-start ">
+    <div
+      id="about"
+      className="p-20 my-20 text-left     flex flex-col items-start justify-start "
+    >
       <motion.h1
         variants={titleVariants}
         className="text-4xl sm:text-6xl md:text-7xl  lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"
@@ -63,16 +66,8 @@ Let's build something that matters.`;
         ))}
       </motion.h1>
       <div className="flex flex-wrap gap-2 mt-10 cursor-pointer ">
-        {aboutME.split(" ").map((text, index) => (
-          <div
-            key={index}
-            className=" opacity-70 hover:opacity-100 text-7xl text-[var(--text-color-secondary)] hover:text-[#FF8200]"
-          >
-            {text}
-          </div>
-        ))}
+        <WordAnimated value={aboutME} />
       </div>
-      
     </div>
   );
 };
