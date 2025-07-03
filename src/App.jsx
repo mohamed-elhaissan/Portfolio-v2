@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Loader from "./components/Loader";
 import Hero from "./components/hero/Hero";
 import Work from "./components/work/Work";
-import About from "./components/about/about";
+import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
