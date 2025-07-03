@@ -1,11 +1,15 @@
+import loadable$2 from "@loadable/component";
 import { useEffect, useState } from "react";
 import Header from "./components/hero/Header";
 import { motion } from "motion/react";
 import Loader from "./components/Loader.jsx";
 import Hero from "./components/hero/Hero.jsx";
 import Work from "./components/work/Work.jsx";
-import About from "./components/about/About.jsx";
+import About from "./components/About/About.jsx";
 import Contact from "./components/contact/Contact.jsx";
+
+
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
