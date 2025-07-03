@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 import Header from "./components/hero/Header";
 import { motion } from "motion/react";
 import Loader from "./components/Loader";
@@ -19,7 +18,7 @@ function App() {
         delayChildren: 0.2,
       },
     },
-};
+  };
   useEffect(() => {
     const handleLoader = () => {
       setIsLoading(false);
@@ -40,11 +39,13 @@ function App() {
         <Loader />
       ) : (
         <motion.div
-          className="flex textFont flex-col selection:bg-[#FF8200] selection:text-black  text-white items-center justify-start min-h-screen relative"
+          className="flex  textFont flex-col selection:bg-[#FF8200] selection:text-black  text-white items-center justify-start min-h-screen relative"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
         >
+        
+
           <div className="flex flex-col min-h-screen">
             <Header />
             <Hero />

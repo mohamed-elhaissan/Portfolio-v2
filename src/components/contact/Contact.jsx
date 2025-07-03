@@ -21,17 +21,17 @@ const Contact = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={wordVariants}
-      className="min-h-screen w-full bg-[#163664] flex flex-col items-center justify-center will-change-transform px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
+      className=" w-full  flex flex-col items-center justify-center will-change-transform px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
     >
       <motion.h1
         variants={wordVariants}
-        className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-white text-center leading-tight mb-4 sm:mb-6"
+        className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-black text-center leading-tight mb-4 sm:mb-6"
       >
         Ready to Build Something Great?
       </motion.h1>
       <motion.p
         variants={wordVariants}
-        className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 text-center max-w-4xl leading-relaxed px-4"
+        className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 text-center max-w-4xl leading-relaxed px-4"
       >
         Let's turn your idea into reality. Send me a message and let's get started.
       </motion.p>

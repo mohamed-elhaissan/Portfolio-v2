@@ -38,10 +38,10 @@ Let's build something that matters.`;
     },
   };
   return (
-    <div id="about" className="p-20 my-20 text-center     flex flex-col items-center justify-center ">
+    <div id="about" className="p-20 my-20 text-left     flex flex-col items-start justify-start ">
       <motion.h1
         variants={titleVariants}
-        className="text-4xl sm:text-6xl md:text-7xl md lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"
+        className="text-4xl sm:text-6xl md:text-7xl  lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"
       >
         {"Who Iam ?".split(" ").map((char, index) => (
           <motion.span
@@ -66,7 +66,7 @@ Let's build something that matters.`;
         {aboutME.split(" ").map((text, index) => (
           <div
             key={index}
-            className="text-lg sm:text-xl md:text-2xl opacity-70 hover:opacity-100 lg:text-3xl xl:text-4xl text-[var(--text-color-secondary)] hover:text-[#FF8200]"
+            className=" opacity-70 hover:opacity-100 text-7xl text-[var(--text-color-secondary)] hover:text-[#FF8200]"
           >
             {text}
           </div>

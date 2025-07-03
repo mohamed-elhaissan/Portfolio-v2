@@ -125,19 +125,19 @@ const work = [
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="flex relative flex-col text-black items-center my-20 justify-center w-full flex-1 px-4 sm:px-6 lg:px-8 min-h-screen pt-20 sm:pt-24 lg:pt-28 xl:pt-32 2xl:pt-36"
+      className="flex relative flex-col p-20 text-black items-start my-20 justify-start w-full flex-1  min-h-screen  "
       style={{ zIndex: 1 }}
       
     >
       <motion.div
         variants={titleVariants}
-        className="text-black text-center  leading-8 sm:leading-10"
+        className="text-black text-left  leading-8 sm:leading-10"
       >
         <motion.h1
           variants={titleVariants}
           className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"
         >
-          {"Work".split("").map((char, index) => (
+          {"My Work".split("").map((char, index) => (
             <motion.span
               style={{ display: "inline-block" }}
               variants={charVariants}
