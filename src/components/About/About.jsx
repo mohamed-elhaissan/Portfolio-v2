@@ -44,7 +44,7 @@ Let's build something that matters.`;
     >
       <motion.h1
         variants={titleVariants}
-        className="text-4xl sm:text-6xl md:text-7xl  lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"
+        className="text-5xl sm:text-xl md:text-7xl  lg:text-8xl xl:text-9xl text-[#163664] will-change-transform"
       >
         {"Who Iam ?".split(" ").map((char, index) => (
           <motion.span

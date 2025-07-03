@@ -76,7 +76,7 @@ const Hero = () => {
   return (
     <motion.div
       variants={containerVariants}
-      className="flex relative flex-col     items-center justify-center w-full flex-1"
+      className="flex relative flex-col items-center justify-center w-full flex-1 px-4 sm:px-6 lg:px-8"
     >
      
       <motion.span
@@ -89,14 +89,14 @@ const Hero = () => {
           damping: 15,
           stiffness: 200,
         }}
-        className="text-2xl mb-4 text-[var(--text-color-secondary)] items-center "
+        className="text-lg sm:text-xl md:text-2xl mb-2 sm:mb-4 text-[var(--text-color-secondary)] items-center"
       >
         (*)
       </motion.span>
 
       <motion.div
         variants={titleVariants}
-        className="text-6xl md:text-9xl flex flex-wrap gap-4 md:gap-10 justify-center items-center"
+        className="text-7xl sm:text-8xl  md:text-6xl lg:text-7xl xl:text-9xl flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-4 md:gap-6 lg:gap-10 justify-center items-center text-center"
       >
         <motion.div
           variants={titleVariants}
@@ -160,7 +160,7 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         transition={{ staggerChildren: 0.04, delayChildren: 1.2 }}
-        className="text-xl md:text-4xl text-[#163664] selection:bg-[#FF8200] selection:text-black  mt-8 text-center max-w-4xl px-4 "
+        className="text-xl tracking-wide  sm:text-xl md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl text-[#163664] selection:bg-[#FF8200] selection:text-black mt-4 sm:mt-6 md:mt-8 text-center max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl px-4 leading-relaxed"
       >
         {secondLine.split(" ").map((word, index) => (
           <motion.span
@@ -184,7 +184,7 @@ const Hero = () => {
           damping: 10,
           stiffness: 100,
         }}
-        className="absolute top-1/4 left-10 w-2 h-2 bg-black rounded-full opacity-20"
+        className="absolute top-1/4 left-4 sm:left-10 w-1 h-1 sm:w-2 sm:h-2 bg-black rounded-full opacity-20"
       />
 
       <motion.div
@@ -197,7 +197,7 @@ const Hero = () => {
           damping: 10,
           stiffness: 100,
         }}
-        className="absolute top-1/3 right-16 w-1 h-1 bg-black rounded-full opacity-30"
+        className="absolute top-1/3 right-6 sm:right-16 w-1 h-1 bg-black rounded-full opacity-30"
       />
     </motion.div>
   );

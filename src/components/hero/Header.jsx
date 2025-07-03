@@ -1,17 +1,16 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const scrollToSection = (sectionID) =>{
-    const element = document.getElementById(sectionID)
-    if(element){
+  const scrollToSection = (sectionID) => {
+    const element = document.getElementById(sectionID);
+    if (element) {
       element.scrollIntoView({
         behavior: "smooth",
-        
-      })
+      });
     }
-  }
+  };
   const headerVariants = {
     hidden: {
       opacity: 0,
@@ -36,36 +35,66 @@ const Header = () => {
       animate="visible"
       variants={headerVariants}
       exit="hidden"
-      className="flex items-center justify-between w-full p-6  "
+      className="flex items-center flex-col md:flex-row  justify-between w-full p-6  "
     >
-      <Link to="/" className="text-3xl   p-2 hover:opacity-50  rounded-md text-[var(--text-color)]   ">
+      <Link
+        to="/"
+        className="text-3xl   p-2 hover:opacity-50  rounded-md text-[var(--text-color)]   "
+      >
         elhaissan.dev
       </Link>
 
-
       <div>
         <nav className="flex  text-xl items-center justify-center gap-6  text-[var(--text-color)]">
-          
           <li>
-            <button onClick={()=>{scrollToSection("about")}}  className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]" >about</button>
+            <button
+              onClick={() => {
+                scrollToSection("about");
+              }}
+              className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]"
+            >
+              about
+            </button>
           </li>
           <li>
-            <button onClick={()=>{scrollToSection("work")}}  className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]" >work</button>
+            <button
+              onClick={() => {
+                scrollToSection("work");
+              }}
+              className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]"
+            >
+              work
+            </button>
           </li>
           <li>
-            <Link to={'https://www.linkedin.com/in/mohamed-elhaissan-050509301/'} className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]" target="_blank">linkedin</Link>
+            <Link
+              to={"https://www.linkedin.com/in/mohamed-elhaissan-050509301/"}
+              className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]"
+              target="_blank"
+            >
+              linkedin
+            </Link>
           </li>
           <li>
-            <Link to={'https://www.instagram.com/mohamed_elhaissan/'} className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]" target="_blank">instagram</Link>
+            <Link
+              to={"https://www.instagram.com/mohamed_elhaissan/"}
+              className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]"
+              target="_blank"
+            >
+              instagram
+            </Link>
           </li>
           <li>
-            <Link to={'https://www.github.com/mohamed-elhaissan/'} className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]" target="_blank">github</Link>
+            <Link
+              to={"https://www.github.com/mohamed-elhaissan/"}
+              className=" px-2 cursor-pointer py-1 rounded-md hover:bg-[#f5f5f5]"
+              target="_blank"
+            >
+              github
+            </Link>
           </li>
         </nav>
       </div>
-  
-    
-     
     </motion.header>
   );
 };
